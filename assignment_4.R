@@ -1,4 +1,6 @@
-#assignment for lab 6
+#assignment 4 for lab 6
+#Group 3: Nala Hamilton, Rohan Harolikar, Eric Hill Katherine Hurm, Hannah Joseph, Taylor Forry
+
 #Do NOT use the function “rank()” or “order()” from base R,
 
 #1) rank the scores in “MidtermGradeSheet.csv” by using a function from package “tidyverse”
