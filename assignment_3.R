@@ -1,3 +1,5 @@
+#assignment 3 associated with lab 4
+
 #Use the data from the file “Lab1_Mouse_DNA_methylation_small_table.txt”. At 92%
 #confidence level, compute the confidence interval of the mean of the DNA methylation of gene
 #Sh2b3 of all the 12 mice.
