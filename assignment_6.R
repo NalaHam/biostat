@@ -1,3 +1,5 @@
+#assignment 6 for lab 8
+
 #1. Generate a data frame and name it as “AB”. This “AB” includes the data of reduced
 #tumor size and increased tumor size for the two tested drugs only. Write R codes to
 #rename the column names as “Reduced Tumor Size” and “Increased Tumor Size”. Show
