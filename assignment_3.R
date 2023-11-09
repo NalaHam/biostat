@@ -25,7 +25,7 @@ lowerCL<-a-w
 
 
 #2) Define your own function to compute the margin of error and then the CI of the mean.
-(4pts)
+#(4pts)
 w<-function(alpha,a,n){qt(1-alpha/2,n-1)*sd(a)/sqrt(n)}
 UpperLimit<-mean(samples)+w(alpha,samples,n)
 LowerLimit<-mean(samples)-w(alpha,samples,n)
