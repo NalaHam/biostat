@@ -1,3 +1,5 @@
+#assignment 2 associated with lab 3
+
 #A clinical trial testing a drug for its anti-cancer effect enrolled 663 patients, 
 #including 321 patients who were given placebos, and the rest were on the experimental arm. 
 #After the treatments, there were 2 patients, who were taken placebos, were reported with undetected lymph nodes metastasis. 
