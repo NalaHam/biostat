@@ -285,6 +285,81 @@ f<-TukeyHSD(c,ordered=T) #base R function
 
 
 
+list <- c(3,7,9,12,13,16,19,33,102,2216,665358)
+
+median(list)
+
+max(list)
+
+var(list)
+
+library(psych)
+
+geometric.mean(list)
+
+harmonic.mean(list)
+
+t.test(list, conf.level = 0.95)
+
+library(devtools)
+install_github("shearer/PropCIs")
+library(PropCIs)
+
+#wald 
+add4ci(x=32322, n=398765, conf.level= 0.95)
+
+#exact
+exactci(x=32322, n=398765, conf.level= 0.95)
+
+
+#If the confidence level is 92%, what is the z score?
+abs(qnorm(0.08/2)) #1.750686
+
+a<-matrix(c(22,6,17,11),ncol=2,byrow=TRUE)
+
+colnames(a)=c("Survived 6 months","Dead in the 6 months")
+
+rownames(a)=c("DrugA","DrugB")
+
+a
+
+fisher.test(a)
+
+b <- data.frame('A' = c(2, 7, 8, 9, 10), 'B' = c(3,9,6,17,19))
+
+t.test(b$A,b$B,paired=TRUE,var.equal=TRUE)
+
+
+
+#homework notes
+All <- data.frame("BlackMouse" = c(3,  7,  9,  9,  8,  9, 13, 14, 15), 
+                'diets'= c("DietA", "DietA", "DietA", "DietB", "DietB", "DietB", "DietC", "DietC", "DietC"))
+
+MD <-aov(BlackMouse~diets, data=All)
+
+summary(MD)
+
+diets <- c(rep("DietA",3),rep("DietB",3),rep("DietC",3),rep("DietD",3))
+
+
+df <- data.frame("Male_weight" = c(20,21,23,21,21,22,25.5,24,25,23,24.5,24), 
+                 diets)
+
+df$diets <- as.factor(df$diets)
+
+dfANOVA <-aov(Male_weight~diets, data=df)
+
+summary(dfANOVA)
+
+
+library(multcomp)
+
+(d<-glht(dfANOVA,linfct=mcp(diets="Dunnett")))
+
+confint(d, level = 0.95)
+
+
+
 
 
 
