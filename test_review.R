@@ -249,12 +249,16 @@ PFDR<-p.adjust(df$coln,method="fdr",n=30)
 #------------------------------------ Lab 10 -----------------------------------------
 #Comparing Multiple Means—One-way and two-way ANOVA tests
 
+#one way:
 All <- data.frame("BlackMouse" = c(3,  7,  9,  9,  8,  9, 13, 14, 15), 
                 'diets'= c("DietA", "DietA", "DietA", "DietB", "DietB", "DietB", "DietC", "DietC", "DietC"))
 
 MD <-aov(BlackMouse~diets, data=All) 
 
 summary(MD) #gives p-value
+
+#two way:
+aov2<-aov(GeneExpression~TimeLength*Treatments,data=DACVCTime)
 
 #------------------------------------ Lab 11 -----------------------------------------
 #After ANOVA—post hoc analyses
